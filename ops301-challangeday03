@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Prompt user for directory path
+echo "Please enter directory:"
+read dirPath
+
+
+# Prompt user for permissions
+echo "Please enter permissions number:"
+read permissions
+
+# Change directory to the user specified path
+cd "$dirPath"
+
+# Change permissions of all files in the directory
+chmod $permissions *
+
+# List directory contents with new permissions settings
+ls -l
+
+echo "Permissions have been changed for all files in the directory $dirPath."
